@@ -226,9 +226,11 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 0;
   transition: all 0.5s;
   z-index: 997;
+  display: flex;
+  flex-direction: column;
 }
 
 .header .logo {
@@ -1858,5 +1860,67 @@ margin-bottom:10px;
 @media only screen and (max-width: 990px) {
   .our-team {
     margin-bottom: 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Workshop Notice Styling
+--------------------------------------------------------------*/
+.workshop-notice {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+  width: 100%;
+}
+
+.workshop-notice .bi-info-circle-fill {
+  color: #ff4757;
+  font-size: 1.1em;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.workshop-notice strong {
+  color: #ff4757;
+}
+
+.workshop-notice .notice-link {
+  color: #ff6b7d;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.workshop-notice .notice-link:hover {
+  color: #ff3742;
+  text-decoration: none;
+}
+
+/* Add padding to main header content */
+.header .container-fluid {
+  padding: 20px 0;
+}
+
+/* Position content exactly where header ends */
+body.index-page {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Adjust hero section to start after header */
+.hero {
+  padding-top: 200px; /* Original 100px + header height 100px */
+}
+
+@media (max-width: 768px) {
+  .workshop-notice {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  
+  .hero {
+    padding-top: 190px; /* Original 100px + mobile header height 90px */
   }
 }
